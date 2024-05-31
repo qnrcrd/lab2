@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>23</title>
+    <link rel="stylesheet" href="styles/st23.css"></style>
+</head>
+<body>
+    <table id="data">
+        <thead>
+          <tr>
+            <th onclick="sort(0)">name</th>
+            <th onclick="sort(1)">age</th>
+            <th onclick="sort(2)">city</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Yaroslav</td>
+            <td>25</td>
+            <td>Moscow</td>
+          </tr>
+          <tr>
+            <td>Mark</td>
+            <td>30</td>
+            <td>New-York</td>
+          </tr>
+          <tr>
+            <td>Alice</td>
+            <td>35</td>
+            <td>Alexandria</td>
+          </tr>
+        </tbody>
+    </table>
+    
+    <script>
+        function sort(indx)
+        {
+            var table,rows,switching,i,x,y,betterswitch;
+            table=document.getElementById("data");
+            switching=true;
+
+            while(switching)
+            {
+                switching=false;
+                rows=table.getElementsByTagName("tr");
+                for(i=1;i<(rows.length-1);i++)
+                {
+                    betterswitch=false;
+                    x=rows[i].getElementsByTagName("td")[indx];
+                    y=rows[i+1].getElementsByTagName("td")[indx];
+                    if(x.innerHTML.toLowerCase()>y.innerHTML.toLowerCase())
+                    {
+                        betterswitch=true;
+                        break;
+                    }
+                }
+                if(betterswitch)
+                {
+                    rows[i].parentNode.insertBefore(rows[i+1],rows[i]);
+                    switching=true;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

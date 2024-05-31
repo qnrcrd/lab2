@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20</title>
+    <style>
+        canvas
+        {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="cnvs" width="400" height="400"></canvas>
+
+    <script>
+        var cnvs = document.getElementById("cnvs");
+        var ctx = cnvs.getContext("2d");
+        var x=cnvs.width / 2;
+        var y=cnvs.height  -100;
+        var dx=-2;
+        var dy=-2;
+
+        function balling()
+                {
+                    ctx.clearRect(0,0,cnvs.width,cnvs.height);
+                    ctx.beginPath();
+                    ctx.arc(x, y, 10, 0, Math.PI*2);
+                    ctx.fillStyle = "red";
+                    ctx.fill();
+                    ctx.closePath();
+
+                    x+=dx;
+                    y+=dy;
+                }
+        
+            function draw()
+                {
+                    requestAnimationFrame(draw);
+                    balling();                    
+                }
+            draw();
+    </script>
+</body>
+</html>

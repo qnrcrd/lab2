@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22</title>
+</head>
+<body>
+    <form id="form">
+        <div>
+            <label for="username">имя пользователя:</label>
+            <input type="text" id="username" required>
+        </div>
+        <div>
+            <label for="password">пароль (минимум 5 символов + буквы и цифры):</label>
+            <input type="password" id="password" required>
+        </div>
+        <div>
+            <input type="submit" value="register">
+        </div>
+    </form>
+    
+    <script>
+        document.getElementById("form").addEventListener("submit", function(event)
+        {
+            var password=document.getElementById("password").value;
+            if(password.length<5)
+            {
+                alert("пароль слишком короткий");
+                event.preventDefault();
+            }
+            else if(!/\d/.test(password)||!/[a-zA-Z]/.test(password))
+            {
+                alert("пароль должен содержать цифры и буквы");
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
