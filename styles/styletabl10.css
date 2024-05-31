@@ -1,0 +1,25 @@
+th, td{
+    border: 0.2em solid black;
+    border-radius: 10%;
+    border-style: solid;
+    border-color: blueviolet;
+    background-color: burlywood;
+}
+th,td{
+
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    padding-left: 1.4em;
+    padding-right: 1.5em;    
+}
+
+td:hover
+{
+    background-color: rgb(43, 255, 0);
+    font-style: italic;
+}
+body 
+{
+    margin: 0;
+    padding: 0;
+}

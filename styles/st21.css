@@ -1,0 +1,51 @@
+.social-icons {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-left: 0;
+  }
+  .social-icons>li {
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+  }
+  .social-icons a {
+    position: relative;
+    background-color: #eee;
+    display: block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: background-color .3s ease-in-out;
+    width: 8.5rem;
+    height: 8.5rem;
+    border-radius: .25rem;
+  }
+  .social-icons a:hover {
+    background-color: #e0e0e0;
+  }
+  .social-icons a::before {
+    content: "";
+    position: absolute;
+    width: 7.2rem;
+    height: 7.2rem;
+    left: .65rem;
+    top: .65rem;
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+  }
+  .social-icons .social-icon-steam::before {
+    background-image: url("https://steamuserimages-a.akamaihd.net/ugc/2055367128285391621/633545D08D3F7082096220A71777142342A1FC56/");
+  }
+
+  .social-icons .social-icon-github::before {
+    background-image: url("https://cdn.wikimg.net/en/splatoonwiki/images/thumb/8/88/GitHub_Icon.svg/1200px-GitHub_Icon.svg.png");
+  }
+  .social-icons .social-icon-youtube::before {
+    background-image: url("https://vectorified.com/images/youtube-icon-png-transparent-17.png");
+  }
+  .social-icons .social-icon-discord::before {
+    background-image: url("https://gas-kvas.com/grafic/uploads/posts/2024-01/gas-kvas-com-p-logotip-diskord-prozrachnii-fon-11.png");
+  }
