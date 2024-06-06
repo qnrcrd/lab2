@@ -973,7 +973,7 @@ button:focus {
 </body>
 </html>
 ```
-<h2 style="text-align: center">файл задания 16</h2>
+<h2 style="text-align: center">файл задания 17</h2>
 
 ```html
 <!DOCTYPE html>
